@@ -19,6 +19,8 @@ _randNum = randint(3, 27)
 _ip = driver.find_element_by_xpath("//div[@class='proxy-list']/table/tbody/tr[%d]/td[2]"%_randNum).text
 _port = driver.find_element_by_xpath("//div[@class='proxy-list']/table/tbody/tr[%d]/td[3]"%_randNum).text
 
+# Functions to return the IP address and Port
+# The port is casted to integer to work with the Profile Builder on selenium
 def _getIP():
 	global _ip
 	return _ip
